@@ -1,5 +1,5 @@
 library(ggplot2)
-library(ggtheme)
+library(ggthemes)
 library(lamW)
 library(minpack.lm)	
 dat <- read.csv("mie_fig3_2TAsulfurol.csv")
