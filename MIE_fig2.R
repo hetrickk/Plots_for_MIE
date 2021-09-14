@@ -1,0 +1,7 @@
+library(ggplot2)
+library(ggsci)
+library(ggthemes)
+dat <- read.csv("mie_fig2_2TAsulfurol.csv")
+v <- ggplot(data = dat) + geom_point(aes(x=t,y=y),shape = ".")+facet_wrap(~type,scales="free")+theme_tufte()
+w <- v+theme(axis.line = element_line(size = 0.25, colour = "black"))+theme(text=element_text(size=12))
+ggsave(plot = w, width = 8, height = 3, dpi = 300, filename = "miefig2.pdf")
