@@ -1,7 +1,7 @@
 library(minpack.lm)
 library(ggplot2)
 library(ggthemes)
-dat <- read.csv('mie_fig6_GrowthCurveFit.csv')
+dat <- read.csv('mie_fig7_GrowthCurveFit.csv')
 y <- dat$RFU
 t <- dat$time_h
 rich <-nlsLM(y~a*(1+v*exp(k*(l-t)))^(-1/v),start=list(l=2,a=12000,k=5,v=5))
